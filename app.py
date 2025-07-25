@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load your trained pipeline
-model = joblib.load("final.pkl")
+model = joblib.load("final_model_small.pkl")
 
 st.set_page_config(page_title="Car Price Predictor", page_icon="🚗")
 st.title("🚗 Car Price Predictor")
@@ -84,11 +84,20 @@ if st.button("🔮 Predict Car Price"):
         'wheelbase': wheelbase
     }])
 
-    # Make the prediction
-    result = model.predict(input_data)[0]
+    # Make the prediction in USD
+    price_usd = model.predict(input_data)[0]
 
-    st.success(f"💡 **Estimated Car Price:** ${result:,.2f}")
-    st.info("Note: This is a prediction based on your inputs and trained data.")
+    # Convert to INR (1 USD ≈ 83 INR)
+    usd_to_inr = 83
+    price_inr = price_usd * usd_to_inr
+
+    st.success(f"💡 Estimated Car Price: ${price_usd:,.2f} USD")
+    st.success(f"💰 Estimated Car Price: ₹{price_inr:,.2f} INR")
+
+    st.info("Note: USD to INR conversion uses a fixed rate of 83. Adjust if needed!")
 
 st.write("---")
-st.caption("🚗 Built with Streamlit • Ridge Regression ML Model")
+st.caption(
+    "🚗 Built with Streamlit • Ridge Regression ML Model  \n"
+    "📚 Created by **Surendar s** — connect with me on [LinkedIn](https://www.linkedin.com/in/surendarsss/)"
+)
