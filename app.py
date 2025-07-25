@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load your trained pipeline
-model = joblib.load("final_model_small.pkl")
+model = joblib.load("final.pkl")
 
 st.set_page_config(page_title="Car Price Predictor", page_icon="🚗")
 st.title("🚗 Car Price Predictor")
