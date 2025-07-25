@@ -24,5 +24,5 @@ This project demonstrates how I combined **machine learning**, **feature enginee
 
 ---
 
-## 📂 **Project Structure**
+
 
