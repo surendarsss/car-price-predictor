@@ -19,7 +19,7 @@ This project demonstrates how I combined **machine learning**, **feature enginee
 
 ## 🚀 **Try it Live**
 
-👉 [**Streamlit App**]([YOUR-STREAMLIT-LINK-HERE](https://car-price-predictor-uvo2usfeb9j5we9pv2jrl2.streamlit.app/))  
+👉 [**Streamlit App**](https://car-price-predictor-uvo2usfeb9j5we9pv2jrl2.streamlit.app/)
 👉 [**LinkedIn Post**](OPTIONAL-LINK-HERE)
 
 ---
